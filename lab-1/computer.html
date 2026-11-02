@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Опис комп'ютера Atari</title>
+    <style>
+        body {
+            background-color: #ffc0cb;
+            color: #4a0e4e;             
+            font-family: 'Gloria', 'Gloria Hallelujah', cursive, sans-serif; 
+            padding: 20px;
+        }
+        
+        .computer-img {
+            border: 0;
+            float: right;
+            margin: 8px 12px;
+        }
+        .content {
+            max-width: 900px;
+        }
+        section {
+            margin-top: 40px;
+            padding-top: 10px;
+            border-top: 1px dashed #4a0e4e; 
+        }
+        a {
+            color: #2a082c; 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <p><a href="index.html">&larr; Повернутися на головну сторінку</a></p>
+
+    <h1>Інтерактивна карта комп'ютера Atari</h1>
+
+    <img src="images/computer.png" width="450" height="320" alt="Комп'ютер Atari" usemap="#atari_map" class="computer-img">
+
+    <map name="atari_map">
+
+        <area shape="rect" coords="120,15,360,200" href="#monitor" alt="Монітор">
+        
+        <area shape="poly" coords="140,210,340,210,360,260,110,260" href="#console" alt="Консоль">
+        
+        <area shape="circle" coords="70,270,40" href="#joystick" alt="Джойстик">
+    </map>
+
+    <div class="content">
+
+        <section id="monitor">
+            <h2>1. Монітор </h2>
+            <p>Монітор слугував для виведення кольорової графіки та текстової інформації. Підключався безпосередньо до відеовиходу консолі.</p>
+        </section>
+
+        <section id="console">
+            <h2>2. Консоль / Системна база </h2>
+            <p>Центральна частина системи, де розміщувалися процесор, оперативна пам'ять та роз'єми для підключення картриджів з іграми.</p>
+        </section>
+
+        <section id="joystick">
+            <h2>3. Ігровий джойстик</h2>
+            <p>Контролер керування персонажами в іграх. Оснащений важелем руху та кнопкою дій.</p>
+        </section>
+    </div>
+
+</body>
+</html>

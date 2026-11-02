@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота веб технології— Варіант 7</title>
+    <style>
+        body {
+            background-color: #ffc0cb; 
+            color: #4a0e4e;            
+            font-family: 'Gloria', cursive, sans-serif; 
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #4a0e4e;
+        }
+        td {
+            border: 1px solid #4a0e4e;
+            padding: 15px;
+            vertical-align: top;
+        }
+        /* Верхній блок висотою 200px за варіантом 7 */
+        .top-cell {
+            height: 200px;
+        }
+        /* Нижній лівий блок шириною 150px за варіантом 7 */
+        .left-cell {
+            width: 150px;
+        }
+        img.avatar {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #4a0e4e;
+            border-radius: 6px;
+        }
+        a {
+            color: #2a082c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Мої уподобання та інтереси</h1>
+    </h1>
+
+    <!-- Табличний макет -->
+    <table>
+        <tr>
+            <!-- Верхній блок-->
+            <td colspan="2" class="top-cell">
+                <h2>Про мене та мої вподобання</h2>
+                <p>Ласкаво просимо на мою сторінку</p>
+                <p><a href="computer.html">Перейти до карти комп'ютера </a></p>
+            </td>
+        </tr>
+        <tr>
+            <!-- Нижній лівий блок -->
+            <td class="left-cell">
+                <h3>Меню / Навігація</h3>
+                <ul>
+                    <li><a href="#songs">Пісні</a></li>
+                    <li><a href="#subjects">Предмети</a></li>
+                </ul>
+            </td>
+            
+            <!-- Нижній правий блок  -->
+            <td>
+                <h3>Моє фото:</h3>
+                <!-- Фото у клітинці з позначкою * -->
+                <img src="images/turtle.jpeg" alt="Моє фото" class="avatar" width="600">
+
+                <h3 id="songs"> Список улюбленого:</h3>
+                <ul>
+                    <li><strong> Музичні композиції:</strong>
+                        <ul>
+                            <li>Nirvana— Rape me</li>
+                            <li>Ac/DC — T.N.T</li>
+                        </ul>
+                    </li>
+                    <li><strong>Улюблені заняття:</strong> Програмування, читання, спорт.</li>
+                    <li><strong>Тварини:</strong> Собаки, котики, панда.</li>
+                    <li><strong>Рослини:</strong> Троянда, Дуб.</li>
+                    <li><strong>Комп'ютерні ігри:</strong> The Witcher 3, The last of us, God of War.</li>
+                </ul>
+
+                <h3 id="subjects"> Cписок улюблених предметів:</h3>
+                <ol>
+                    <li>Веб-технології та веб-дизайн</li>
+                    <li>Алгоритми та структури даних</li>
+                    <li>Об'єктно-орієнтоване програмування</li>
+                    <li>Бази даних</li>
+                </ol>
+
+                <!-- ФОРМА ЗГІДНО З ЛАБОРАТОРНОЮ РОБОТОЮ №2 (ВАРІАНТ 7) -->
+                <h3>Повідомте про себе:</h3>
+                <form action="" method="post">
+                    <p>Ім'я: <input type="text" name="fname"></p>
+                    <p>Вік: <input type="text" name="age"></p>
+                    <p>Стать: 
+                        <input type="radio" name="gender" value="male" checked> чоловіча 
+                        <input type="radio" name="gender" value="female"> жіноча
+                    </p>
+                    <p>Колір волосся: 
+                        <select name="hair_color">
+                            <option value="dark">Темний</option>
+                            <option value="light">Світлий</option>
+                            <option value="red">Рудий</option>
+                            <option value="other">Інший</option>
+                        </select>
+                    </p>
+                    <p>Колір очей: 
+                        <select name="eye_color">
+                            <option value="brown">Карі</option>
+                            <option value="blue">Блакитні</option>
+                            <option value="green">Зелені</option>
+                            <option value="grey">Сірі</option>
+                        </select>
+                    </p>
+                    <p>Введіть дату:<br>
+                        <input type="text" name="date" placeholder="дд.мм.рр"> дд.мм.рр
+                    </p>
+                    <p>
+                        <input type="submit" value="Відправити">
+                        <input type="reset" value="Скинути">
+                    </p>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

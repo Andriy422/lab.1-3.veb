@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №3 </title>
+    
+    <!-- Підключення бібліотеки анімацій Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        body {
+            background-color: #ffc0cb;
+            color: #4a0e4e;             
+            font-family: 'Gloria', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        a:link { color: #0011AA; text-decoration: none; font-weight: bold; }
+        a:visited { color: #111222; }
+        a:active { color: #005566; }
+        a:hover { text-decoration: underline; }
+
+        /* Верхній заголовок сторінки */
+        header {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 2px solid #4a0e4e;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        /* 3-колоночний контейнер верстки */
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        /* 1. Блок лівого меню */
+        nav.menu-block {
+            width: 160px;
+            flex-shrink: 0;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: 2px solid #4a0e4e;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        nav.menu-block ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        nav.menu-block li {
+            margin-bottom: 10px;
+        }
+
+        /* 2. Основний блок  */
+        main.main-block {
+            flex: 1;
+            background-color: #000000; /* Чорне тло */
+            color: #ffffff;
+            border: 2px solid #4a0e4e;
+            padding: 20px;
+            border-radius: 8px;
+            min-width: 0;
+        }
+
+        main.main-block h2 {
+            color: #ffc0cb;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        /* Сітка колажу */
+        .collage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Блок кожної фотографії */
+        .photo-card {
+            background-color: #1a1a1a;
+            border: 1px solid #4a0e4e;
+            padding: 8px;
+            border-radius: 6px;
+            text-align: center;
+            opacity: 0.75;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .photo-card:hover {
+            opacity: 1.0;
+            transform: scale(1.03);
+            cursor: pointer;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .photo-card p {
+            font-size: 13px;
+            margin: 8px 0 0 0;
+            color: #ffc0cb;
+        }
+
+        .variant7-special-paragraph {
+            border-left: 3mm solid blue;   
+            border-right: 3mm solid blue;  
+            padding-left: 5mm;            
+            padding-right: 5mm;           
+            font-family: Arial, sans-serif;
+            font-style: italic;           
+            color: #ffffff;
+            background-color: #1a1a1a;
+            margin: 25px 0 0 0;
+            line-height: 1.5;
+        }
+
+        aside.poem-block {
+            width: 240px;
+            flex-shrink: 0;
+            background-color: #ffc0cb;
+            color: #4a0e4e;
+            border: 4px groove #4a0e4e; 
+            padding: 15px;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            cursor: help; 
+            box-sizing: border-box;
+            position: sticky; 
+            top: 20px;
+        }
+
+        aside.poem-block h3 {
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 1px solid #4a0e4e;
+            padding-bottom: 5px;
+        }
+
+        .poem-text {
+            white-space: pre-line;
+            font-style: italic;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сторінки -->
+    <header>
+        <h1>Краса нашої планети</h1>
+        <p>Творець: Диякон А.О.</p>
+    </header>
+
+    <div class="wrapper">
+
+        <!-- 1. Ліве меню -->
+        <nav class="menu-block">
+            <h3>Меню</h3>
+            <ul>
+                <li><a href="index.html">Лабораторна 1</a></li>
+                <li><a href="index.html#form-section">Лабораторна 2</a></li>
+                <li><a href="lab3.html">Лабораторна 3</a></li>
+                <li><a href="computer.html">Карта Atari</a></li>
+            </ul>
+        </nav>
+
+        <!-- 2. Центральна секція  -->
+        <main class="main-block">
+            <h2>Колаж світлин</h2>
+            <p style="text-align: center; color: #cccccc;">Наведіть курсор на фото для перегляду з 100% чіткістю</p>
+
+            <!-- Сітка з 6 фото та 6 анімаціями -->
+            <div class="collage-grid">
+                
+                <div class="photo-card animate__animated animate__fadeInDown">
+                    <img src="images/antarctic.jpeg" alt="Світлина 1">
+                    <p>1. FadeInDown</p>
+                </div>
+
+                <div class="photo-card animate__animated animate__bounceIn">
+                    <img src="images/Arizona.jpeg" alt="Світлина 2">
+                    <p>2. BounceIn</p>
+                </div>
+
+                <div class="photo-card animate__animated animate__zoomIn">
+                    <img src="images/desert.jpeg" alt="Світлина 3">
+                    <p>3. ZoomIn</p>
+                </div>
+
+                <div class="photo-card animate__animated animate__flipInX">
+                    <img src="images/lake.jpeg" alt="Світлина 4">
+                    <p>4. FlipInX</p>
+                </div>
+
+                <div class="photo-card animate__animated animate__rotateIn">
+                    <img src="images/mountains.jpeg" alt="Світлина 5">
+                    <p>5. RotateIn</p>
+                </div>
+
+                <div class="photo-card animate__animated animate__pulse">
+                    <img src="images/waterfall.jpeg" alt="Світлина 6">
+                    <p>6. Pulse</p>
+                </div>
+
+            </div>
+
+            <div class="variant7-special-paragraph">
+                <strong>Коментар творця:</strong><br>
+                Фото були зроблені не мною, але всі права захищені. МИ ПРОТИ ПІРАТСТВА!
+            </div>
+
+        </main>
+
+        <aside class="poem-block">
+            <h3>Заповіт</h3>
+            <div class="poem-text">
+                Як умру, то поховайте
+                Мене на могилі
+                Серед степу широкого
+                На Вкраїні милій,
+
+                Щоб лани широкополі,
+                І Дніпро, і кручі
+                Було видно, було чути,
+                Як реве ревучий.
+
+                Як понесе з України
+                У синєє море
+                Кров ворожу... отойді я
+                І лани і гори —
+                Все покину, і полину
+                До самого Бога
+                Молитися... а до того
+                Я не знаю Бога.
+
+                Поховайте та вставайте,
+                Кайдани порвіть
+                І вражою злою кров’ю
+                Волю кропіте.
+
+                І мене в сім’ї великій,
+                В сім’ї вольній, новій,
+                Не забудьте пом’янути
+                Незлим тихим словом.
+
+                <strong>— Т. Г. Шевченко</strong>
+            </div>
+        </aside>
+
+    </div>
+
+</body>
+</html>
